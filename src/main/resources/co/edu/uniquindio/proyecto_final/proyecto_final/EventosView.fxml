@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:controller="co.edu.uniquindio.proyecto_final.proyecto_final.viewController.EventosViewController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D0C3B2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="235.0" layoutY="8.0" text="Eventos">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="TableEventos" layoutY="150.0" prefHeight="151.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="TcCodigoEvento" prefWidth="47.0" text="Código" />
+          <TableColumn fx:id="TcNombreEvento" prefWidth="84.0" text="Nombre" />
+            <TableColumn fx:id="TcDescripcionEvento" prefWidth="114.0" text="Descripción" />
+            <TableColumn fx:id="TcFechaEvento" prefWidth="88.0" text="Fecha" />
+            <TableColumn fx:id="TcCapacidadEvento" prefWidth="89.0" text="Capacidad" />
+            <TableColumn fx:id="TcEncargadoEvento" prefWidth="65.0" text="Encargado" />
+            <TableColumn fx:id="TcReservaEvento" prefWidth="112.0" text="Estado  de eserva" />
+        </columns>
+      </TableView>
+      <Button fx:id="BtnRegresar" layoutX="14.0" layoutY="352.0" mnemonicParsing="false" onAction="#RegresarAction" text="Regresar" />
+      <Button fx:id="BtnEliminarEvento" layoutX="488.0" layoutY="352.0" mnemonicParsing="false" onAction="#EliminarEventoAction" text="Eliminar evento" />
+      <Button fx:id="BtnAceptarEvento" layoutX="426.0" layoutY="75.0" mnemonicParsing="false" onAction="#AceptarEventoAction" text="Aceptar evento" />
+      <Button fx:id="BtnCancelarEvento" layoutX="59.0" layoutY="75.0" mnemonicParsing="false" onAction="#CancelarEventoAction" text="Cancelar evento" />
+      <Separator layoutX="6.0" layoutY="60.0" prefHeight="1.0" prefWidth="589.0" />
+      <Separator layoutX="6.0" layoutY="326.0" prefHeight="1.0" prefWidth="589.0" />
+      <Separator layoutX="7.0" layoutY="119.0" prefHeight="1.0" prefWidth="589.0" />
+      <Separator layoutX="192.0" layoutY="86.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="243c359d-8a84-4c6d-91b0-d574e53f3f21" name="Changes" comment="repositorio nuevo" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Alexsanderrm &lt;neidera.ruizm@uqvirtual.edu.co&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Alex2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Casb29XD&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Alexsanderrm/alexa.git&quot;,
+    &quot;accountId&quot;: &quot;6a9847e5-6ca4-45b0-8399-7b62af6ade4a&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2e6ok7n8H0hfTlB0Ix6R37qz6gq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/neide/IdeaProjects/Proyecto_Final/Proyecto_Final",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="243c359d-8a84-4c6d-91b0-d574e53f3f21" name="Changes" comment="" />
+      <created>1711234530099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711234530099</updated>
+      <workItem from="1711234531125" duration="56000" />
+      <workItem from="1711234628777" duration="43000" />
+      <workItem from="1711234942066" duration="82000" />
+      <workItem from="1711235103673" duration="25000" />
+      <workItem from="1711303052114" duration="683000" />
+      <workItem from="1711470837535" duration="91000" />
+      <workItem from="1711471599157" duration="1261000" />
+      <workItem from="1711472867233" duration="66000" />
+      <workItem from="1711555246988" duration="5029000" />
+      <workItem from="1711650202718" duration="1442000" />
+      <workItem from="1713386682187" duration="6925000" />
+      <workItem from="1713417863112" duration="4782000" />
+      <workItem from="1713487417094" duration="9398000" />
+      <workItem from="1713501517116" duration="2210000" />
+      <workItem from="1713630939633" duration="1172000" />
+      <workItem from="1716077511138" duration="2150000" />
+      <workItem from="1716080128489" duration="21248000" />
+      <workItem from="1716497314709" duration="478000" />
+      <workItem from="1716497798258" duration="81000" />
+      <workItem from="1716508202152" duration="1480000" />
+      <workItem from="1716615174651" duration="5039000" />
+      <workItem from="1716648486531" duration="4629000" />
+    </task>
+    <task id="LOCAL-00001" summary="map">
+      <option name="closed" value="true" />
+      <created>1711486022888</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711486022888</updated>
+    </task>
+    <task id="LOCAL-00002" summary="map">
+      <option name="closed" value="true" />
+      <created>1711486036526</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711486036526</updated>
+    </task>
+    <task id="LOCAL-00003" summary="map">
+      <option name="closed" value="true" />
+      <created>1711486197432</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711486197432</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lol">
+      <option name="closed" value="true" />
+      <created>1711486551200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711486551200</updated>
+    </task>
+    <task id="LOCAL-00005" summary="con">
+      <option name="closed" value="true" />
+      <created>1711486751778</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711486751778</updated>
+    </task>
+    <task id="LOCAL-00006" summary="model">
+      <option name="closed" value="true" />
+      <created>1711571783020</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711571783020</updated>
+    </task>
+    <task id="LOCAL-00007" summary="model">
+      <option name="closed" value="true" />
+      <created>1711571929522</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711571929522</updated>
+    </task>
+    <task id="LOCAL-00008" summary="model">
+      <option name="closed" value="true" />
+      <created>1711572047204</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711572047204</updated>
+    </task>
+    <task id="LOCAL-00009" summary="cambios">
+      <option name="closed" value="true" />
+      <created>1711573538474</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711573538474</updated>
+    </task>
+    <task id="LOCAL-00010" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716079494556</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716079494556</updated>
+    </task>
+    <task id="LOCAL-00011" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716080084715</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716080084715</updated>
+    </task>
+    <task id="LOCAL-00012" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716081289089</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716081289089</updated>
+    </task>
+    <task id="LOCAL-00013" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716082450941</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716082450941</updated>
+    </task>
+    <task id="LOCAL-00014" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716088946541</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716088946541</updated>
+    </task>
+    <task id="LOCAL-00015" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716091913098</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716091913098</updated>
+    </task>
+    <task id="LOCAL-00016" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716100224474</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716100224474</updated>
+    </task>
+    <task id="LOCAL-00017" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716101027859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716101027859</updated>
+    </task>
+    <task id="LOCAL-00018" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716103643791</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1716103643791</updated>
+    </task>
+    <task id="LOCAL-00019" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716104562839</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716104562839</updated>
+    </task>
+    <task id="LOCAL-00020" summary="repositorio nuevo">
+      <option name="closed" value="true" />
+      <created>1716106009036</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1716106009036</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+    <MESSAGE value="map" />
+    <MESSAGE value="lol" />
+    <MESSAGE value="con" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/construcor' into construcor" />
+    <MESSAGE value="model" />
+    <MESSAGE value="cambios" />
+    <MESSAGE value="repositorio nuevo" />
+    <option name="LAST_COMMIT_MESSAGE" value="repositorio nuevo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/Sgre.java</url>
+          <line>387</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/Sgre.java</url>
+          <line>253</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/Sgre.java</url>
+          <line>244</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

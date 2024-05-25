@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: D0C3B2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto_final.proyecto_final.viewController.RegistroViewController">
+   <children>
+      <Label layoutX="237.0" layoutY="28.0" prefHeight="34.0" prefWidth="128.0" text="REGISTRARSE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TxtRegistroCorreo" layoutX="226.0" layoutY="209.0" promptText="Correo" />
+      <TextField fx:id="TxtRegistroNombre" layoutX="226.0" layoutY="169.0" promptText="Nombre" />
+      <TextField fx:id="TxtRegistroPass" layoutX="226.0" layoutY="249.0" promptText="Contraseña" />
+      <Button fx:id="BtnRegistroGuardar" layoutX="263.0" layoutY="353.0" mnemonicParsing="false" text="Registrarse" onAction="#RegistrarseAction" />
+      <Button fx:id="BtnRegistroRegresar" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" text="Regresar" onAction="#RegresarAction" />
+      <Separator layoutX="6.0" layoutY="93.0" prefHeight="1.0" prefWidth="589.0" />
+      <Separator layoutX="6.0" layoutY="330.0" prefHeight="1.0" prefWidth="589.0" />
+      <ImageView layoutX="197.0" layoutY="174.0">
+         <image>
+            <Image url="@../../../../../Img/usuarioRegistro.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="197.0" layoutY="214.0">
+         <image>
+            <Image url="@../../../../../Img/correo.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="197.0" layoutY="254.0">
+         <image>
+            <Image url="@../../../../../Img/bloquear.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="TxtRegistroId" layoutX="226.0" layoutY="131.0" promptText="Id" />
+      <ImageView layoutX="197.0" layoutY="136.0">
+         <image>
+            <Image url="@../../../../../Img/usuarioRegistro.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
