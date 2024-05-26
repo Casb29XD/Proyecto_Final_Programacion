@@ -29,6 +29,8 @@ public class EmpleadoViewController {
     Login login = new Login();
     public static final String RUTA_ARCHIVO_EMPLEADOS = "src/main/resources/persistencia/login/Empleados.txt";
 
+    private String idUsuario;
+
     @FXML
     private TextField txtId;
 
@@ -62,7 +64,7 @@ public class EmpleadoViewController {
     @FXML
     private TextField txtCorreo;
     @FXML
-    public PasswordField password;
+    public PasswordField Password;
 
     @FXML
     private Button btnActualizar;
@@ -108,10 +110,14 @@ public class EmpleadoViewController {
 
     @FXML
     void nuevoEmpleadoAction(ActionEvent event) {
+        txtNombre.setText("");
+        txtId.setText("");
+        txtCorreo.setText("");
+        Password.setText("");
         txtNombre.setPromptText("Ingrese el nombre");
         txtId.setPromptText("Ingrese la cedula");
         txtCorreo.setPromptText("Ingrese el correo");
-        password.setPromptText("Ingrese la Contraseña");
+        Password.setPromptText("Ingrese la Contraseña");
     }
 
     @FXML
@@ -130,7 +136,7 @@ public class EmpleadoViewController {
     private void crearEmpleado() {
         //1. Capturar los datos
         EmpleadoDto empleadoDto = construirEmpleadoDto();
-        String contraseña = password.getText().toString();
+        String contraseña = Password.getText().toString();
         //2. Validar la información
         if(datosValidos(empleadoDto)){
             if(empleadoControllerService.agregarEmpleado(empleadoDto)){
@@ -171,7 +177,7 @@ public class EmpleadoViewController {
     }
 
     private void actualizarEmpleado() {
-        String contraseña = password.getText().toString();
+        String contraseña = Password.getText().toString();
         boolean clienteActualizado = false;
         //1. Capturar los datos
         String cedulaActual = empleadoSeleccionado.id();
@@ -213,6 +219,7 @@ public class EmpleadoViewController {
         txtNombre.setText("");
         txtId.setText("");
         txtCorreo.setText("");
+        Password.setText("");
     }
 
     private boolean datosValidos(EmpleadoDto empleadoDto) {
@@ -265,5 +272,8 @@ public class EmpleadoViewController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }

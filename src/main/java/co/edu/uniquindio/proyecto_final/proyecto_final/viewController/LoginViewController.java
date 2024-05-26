@@ -68,7 +68,6 @@ public class LoginViewController {
     private String getViewPath(String role) {
         String usuario= TxtLoginID.getText();
         String contraseña = password.getText().toString();
-        System.out.println(usuario+contraseña);
         if(!usuario.equals("") && !contraseña.equals("")){
             switch (role) {
                 case "Empleado":
@@ -85,7 +84,7 @@ public class LoginViewController {
                 case "Administrador":
                     if (login.login(usuario,contraseña,RUTA_ARCHIVO_ADMIN)) {
                         persistencia.guardaRegistroLog("Inicio de seccion por Empleado", 2, "Inicio seccion el empleado " + usuario);
-                        return "/co/edu/uniquindio/proyecto_final/proyecto_final/UsuarioView.fxml";
+                        return "/co/edu/uniquindio/proyecto_final/proyecto_final/EmpleadoView.fxml";
                     }
                 default:
                     return null;
