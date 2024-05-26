@@ -3,6 +3,7 @@ package co.edu.uniquindio.proyecto_final.proyecto_final.viewController;
 import co.edu.uniquindio.proyecto_final.proyecto_final.controller.EmpleadoController;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EmpleadoDto;
 
+import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +23,7 @@ public class EmpleadoViewController {
     EmpleadoController empleadoControllerService;
     ObservableList<EmpleadoDto> listaEmpleadosDto = FXCollections.observableArrayList();
     EmpleadoDto empleadoSeleccionado;
+    Persistencia persistencia;
 
     @FXML
     private TextField txtId;
