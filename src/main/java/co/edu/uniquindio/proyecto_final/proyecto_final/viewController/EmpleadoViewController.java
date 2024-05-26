@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 public class EmpleadoViewController {
+
     EmpleadoController empleadoControllerService;
     ObservableList<EmpleadoDto> listaEmpleadosDto = FXCollections.observableArrayList();
     EmpleadoDto empleadoSeleccionado;
@@ -128,6 +129,7 @@ public class EmpleadoViewController {
             if(empleadoControllerService.agregarEmpleado(empleadoDto)){
                 listaEmpleadosDto.add(empleadoDto);
                 mostrarMensaje("Notificación empleado", "Empleado creado", "El empleado se ha creado con éxito", Alert.AlertType.INFORMATION);
+                persistencia.guardaRegistroLog("Creacion Empleado",2, "Se creo un empleado con la cedula de " + empleadoDto.id());
                 limpiarCamposEmpleado();
             }else{
                 mostrarMensaje("Notificación empleado", "Empleado no creado", "El empleado no se ha creado con éxito", Alert.AlertType.ERROR);
@@ -148,6 +150,7 @@ public class EmpleadoViewController {
                     empleadoSeleccionado = null;
                     tableEmpleados.getSelectionModel().clearSelection();
                     limpiarCamposEmpleado();
+                    persistencia.guardaRegistroLog("Eliminacio de Empleado",2, "Se Elimino el empleado con la cedula de " + empleadoSeleccionado.id());
                     mostrarMensaje("Notificación empleado", "Empleado eliminado", "El empleado se ha eliminado con éxito", Alert.AlertType.INFORMATION);
                 }else{
                     mostrarMensaje("Notificación empleado", "Empleado no eliminado", "El empleado no se puede eliminar", Alert.AlertType.ERROR);
@@ -173,6 +176,7 @@ public class EmpleadoViewController {
                     listaEmpleadosDto.add(empleadoDto);
                     tableEmpleados.refresh();
                     mostrarMensaje("Notificación empleado", "Empleado actualizado", "El empleado se ha actualizado con éxito", Alert.AlertType.INFORMATION);
+                    persistencia.guardaRegistroLog("Actualizacion de Empleado",2, "Se Actualizo la informacion del empleado con la cedula de " + empleadoDto.id());
                     limpiarCamposEmpleado();
                 }else{
                     mostrarMensaje("Notificación empleado", "Empleado no actualizado", "El empleado no se ha actualizado con éxito", Alert.AlertType.INFORMATION);

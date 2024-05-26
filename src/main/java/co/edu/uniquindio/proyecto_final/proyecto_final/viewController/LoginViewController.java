@@ -1,20 +1,21 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.viewController;
 
+import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class LoginViewController {
-
+    public static final String RUTA_ARCHIVO_EMPLEADOS = "src/main/resources/persistencia/login/Usuarios.txt";
+    public static final String RUTA_ARCHIVO_USUARIOS = "src/main/resources/persistencia/login/Empleados.txt";
+    public static final String RUTA_ARCHIVO_ADMIN = "src/main/resources/persistencia/login/Administradores.txt";
+    Login login;
     @FXML
     private TextField TxtLoginID;
 
@@ -31,7 +32,7 @@ public class LoginViewController {
     private Label LabelLogin;
 
     @FXML
-    private TextField BtnLoginClave;
+    private PasswordField password;
 
     @FXML
     void initialize() {
@@ -66,6 +67,7 @@ public class LoginViewController {
 
         switch (role) {
             case "Empleado":
+                persistencia.guardaRegistroLog("Creacion Empleado",2, "Se creo un empleado con la cedula de " + );
                 return "/co/edu/uniquindio/proyecto_final/proyecto_final/EmpleadoView.fxml";
             case "Usuario":
                 return "/co/edu/uniquindio/proyecto_final/proyecto_final/UsuarioView.fxml";
