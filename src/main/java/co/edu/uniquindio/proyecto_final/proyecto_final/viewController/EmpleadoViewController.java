@@ -3,6 +3,7 @@ package co.edu.uniquindio.proyecto_final.proyecto_final.viewController;
 import co.edu.uniquindio.proyecto_final.proyecto_final.controller.EmpleadoController;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EmpleadoDto;
 
+import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Login;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -25,6 +26,8 @@ public class EmpleadoViewController {
     ObservableList<EmpleadoDto> listaEmpleadosDto = FXCollections.observableArrayList();
     EmpleadoDto empleadoSeleccionado;
     Persistencia persistencia;
+    Login login = new Login();
+    public static final String RUTA_ARCHIVO_EMPLEADOS = "src/main/resources/persistencia/login/Empleados.txt";
 
     @FXML
     private TextField txtId;
@@ -58,6 +61,8 @@ public class EmpleadoViewController {
 
     @FXML
     private TextField txtCorreo;
+    @FXML
+    public PasswordField password;
 
     @FXML
     private Button btnActualizar;
@@ -103,9 +108,10 @@ public class EmpleadoViewController {
 
     @FXML
     void nuevoEmpleadoAction(ActionEvent event) {
-        txtNombre.setText("Ingrese el nombre");
-        txtId.setText("Ingrese la cedula");
-        txtCorreo.setText("Ingrese el correo");
+        txtNombre.setPromptText("Ingrese el nombre");
+        txtId.setPromptText("Ingrese la cedula");
+        txtCorreo.setPromptText("Ingrese el correo");
+        password.setPromptText("Ingrese la Contraseña");
     }
 
     @FXML
@@ -124,12 +130,14 @@ public class EmpleadoViewController {
     private void crearEmpleado() {
         //1. Capturar los datos
         EmpleadoDto empleadoDto = construirEmpleadoDto();
+        String contraseña = password.getText().toString();
         //2. Validar la información
         if(datosValidos(empleadoDto)){
             if(empleadoControllerService.agregarEmpleado(empleadoDto)){
                 listaEmpleadosDto.add(empleadoDto);
                 mostrarMensaje("Notificación empleado", "Empleado creado", "El empleado se ha creado con éxito", Alert.AlertType.INFORMATION);
                 persistencia.guardaRegistroLog("Creacion Empleado",2, "Se creo un empleado con la cedula de " + empleadoDto.id());
+                login.register(empleadoDto.id(),contraseña,RUTA_ARCHIVO_EMPLEADOS);
                 limpiarCamposEmpleado();
             }else{
                 mostrarMensaje("Notificación empleado", "Empleado no creado", "El empleado no se ha creado con éxito", Alert.AlertType.ERROR);
@@ -150,6 +158,7 @@ public class EmpleadoViewController {
                     empleadoSeleccionado = null;
                     tableEmpleados.getSelectionModel().clearSelection();
                     limpiarCamposEmpleado();
+                    login.deleteUser(empleadoSeleccionado.id(), RUTA_ARCHIVO_EMPLEADOS);
                     persistencia.guardaRegistroLog("Eliminacio de Empleado",2, "Se Elimino el empleado con la cedula de " + empleadoSeleccionado.id());
                     mostrarMensaje("Notificación empleado", "Empleado eliminado", "El empleado se ha eliminado con éxito", Alert.AlertType.INFORMATION);
                 }else{
@@ -162,6 +171,7 @@ public class EmpleadoViewController {
     }
 
     private void actualizarEmpleado() {
+        String contraseña = password.getText().toString();
         boolean clienteActualizado = false;
         //1. Capturar los datos
         String cedulaActual = empleadoSeleccionado.id();
@@ -178,6 +188,9 @@ public class EmpleadoViewController {
                     mostrarMensaje("Notificación empleado", "Empleado actualizado", "El empleado se ha actualizado con éxito", Alert.AlertType.INFORMATION);
                     persistencia.guardaRegistroLog("Actualizacion de Empleado",2, "Se Actualizo la informacion del empleado con la cedula de " + empleadoDto.id());
                     limpiarCamposEmpleado();
+                    if (!contraseña.equals("")){
+                        login.updatePassword(empleadoSeleccionado.id(),contraseña,RUTA_ARCHIVO_EMPLEADOS);
+                    }
                 }else{
                     mostrarMensaje("Notificación empleado", "Empleado no actualizado", "El empleado no se ha actualizado con éxito", Alert.AlertType.INFORMATION);
                 }

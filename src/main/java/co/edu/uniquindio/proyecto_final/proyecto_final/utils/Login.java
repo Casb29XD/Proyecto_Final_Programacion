@@ -78,4 +78,51 @@ public class Login {
             return false;
         }
     }
+    public boolean updatePassword(String username, String newPassword, String file) {
+        Map<String, String> users = loadUsers(file);
+
+        if (!users.containsKey(username)) {
+            System.out.println("Usuario no encontrado");
+            return false;
+        }
+
+        users.put(username, newPassword);
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+            for (Map.Entry<String, String> entry : users.entrySet()) {
+                bw.write(entry.getKey() + "," + entry.getValue());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to users file: " + e.getMessage());
+            return false;
+        }
+
+        System.out.println("Contraseña actualizada exitosamente para el usuario: " + username);
+        return true;
+    }
+    public boolean deleteUser(String username, String file) {
+        Map<String, String> users = loadUsers(file);
+
+        if (!users.containsKey(username)) {
+            System.out.println("Usuario no encontrado");
+            return false;
+        }
+
+        users.remove(username);
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+            for (Map.Entry<String, String> entry : users.entrySet()) {
+                bw.write(entry.getKey() + "," + entry.getValue());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to users file: " + e.getMessage());
+            return false;
+        }
+
+        System.out.println("Usuario eliminado exitosamente: " + username);
+        return true;
+    }
+
 }
