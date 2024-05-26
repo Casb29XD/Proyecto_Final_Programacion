@@ -67,3 +67,7 @@ may. 25, 2024 4:13:54 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.uti
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-25
 may. 25, 2024 3:46:11 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-25
+may. 26, 2024 4:00:29 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario abc,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 4:03:10 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26

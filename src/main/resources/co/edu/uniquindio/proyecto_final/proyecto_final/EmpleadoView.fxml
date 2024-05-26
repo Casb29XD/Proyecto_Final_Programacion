@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="656.0" style="-fx-background-color: #81BCBD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto_final.proyecto_final.viewController.EmpleadoViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="656.0" style="-fx-background-color: #81BCBD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto_final.proyecto_final.viewController.EmpleadoViewController">
    <children>
        <TableView fx:id="tableEmpleados" layoutY="245.0" prefHeight="166.0" prefWidth="656.0" style="-fx-background-color: B0B8B8;">
          <columns>
@@ -18,11 +22,12 @@
        <Button fx:id="btnNuevo" layoutX="409.0" layoutY="35.0" mnemonicParsing="false" onAction="#nuevoEmpleadoAction" prefHeight="25.0" prefWidth="68.0" text="Nuevo" />
        <Button fx:id="btnActualizar" layoutX="409.0" layoutY="139.0" mnemonicParsing="false" onAction="#actualizarEmpleadoAction" prefHeight="25.0" prefWidth="68.0" text="Actualizar" />
        <Button fx:id="btnAgregar" layoutX="409.0" layoutY="87.0" mnemonicParsing="false" onAction="#agregarEmpleadoAction" prefHeight="25.0" prefWidth="68.0" text="Agregar" />
-       <TextField fx:id="txtNombre" layoutX="43.0" layoutY="35.0" prefHeight="25.0" prefWidth="296.0" promptText="Nombres y apellidos" />
-       <TextField fx:id="txtCorreo" layoutX="43.0" layoutY="87.0" prefHeight="25.0" prefWidth="296.0" promptText="Correo" />
-       <TextField fx:id="txtId" layoutX="43.0" layoutY="139.0" prefHeight="25.0" prefWidth="296.0" promptText="Cédula" />
+       <TextField fx:id="txtNombre" layoutX="43.0" layoutY="22.0" prefHeight="25.0" prefWidth="296.0" promptText="Nombres y apellidos" />
+       <TextField fx:id="txtCorreo" layoutX="43.0" layoutY="74.0" prefHeight="25.0" prefWidth="296.0" promptText="Correo" />
+       <TextField fx:id="txtId" layoutX="43.0" layoutY="126.0" prefHeight="25.0" prefWidth="296.0" promptText="Cédula" />
        <Separator layoutX="357.0" layoutY="11.0" orientation="VERTICAL" prefHeight="174.0" prefWidth="0.0" />
        <Separator layoutX="14.0" layoutY="210.0" prefHeight="0.0" prefWidth="577.0" />
       <Button fx:id="BtnVerEventos" layoutX="562.0" layoutY="420.0" mnemonicParsing="false" onAction="#VerEventosAction" text="Eventos" />
+      <PasswordField fx:id="Password" layoutX="43.0" layoutY="172.0" prefHeight="25.0" prefWidth="296.0" promptText="Contraseña" />
    </children>
 </AnchorPane>

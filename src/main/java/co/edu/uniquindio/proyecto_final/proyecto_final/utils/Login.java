@@ -1,8 +1,12 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.utils;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class Login {
     public boolean login(String username, String password, String file) {
@@ -12,7 +16,7 @@ public class Login {
         if (success) {
             System.out.println("Login Successful");
         } else {
-            System.out.println("Login failed!");
+            mostrarMensajeConfirmacion("Usuario o Contraseña INCORRECTO.");
         }
         return success;
     }
@@ -61,5 +65,17 @@ public class Login {
             return false;
         }
         return true;
+    }
+    private boolean mostrarMensajeConfirmacion(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Confirmación");
+        alert.setContentText(mensaje);
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
