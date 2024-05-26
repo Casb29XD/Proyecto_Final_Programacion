@@ -1,6 +1,10 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.utils;
 
+import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.ReservaDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.*;
+import javafx.collections.ObservableList;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.beans.XMLEncoder;
 import java.io.*;
@@ -213,6 +217,36 @@ public class Persistencia {
             codificadorXML.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    public static void saveObservableListToCSV(ObservableList<ReservaDto> data, Stage primaryStage) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save CSV File");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
+        File selectedFile = fileChooser.showSaveDialog(primaryStage);
+
+        if (selectedFile != null) {
+            try (FileWriter writer = new FileWriter(selectedFile)) {
+                // Write header
+                writer.append("Id,Usuario,Evento,Fecha,Estado\n");
+
+                // Write data
+                for (ReservaDto reserva : data) {
+                    writer.append(reserva.id())
+                            .append(',')
+                            .append(reserva.usuario())
+                            .append(',')
+                            .append(reserva.evento())
+                            .append(',')
+                            .append(reserva.fechaSolicitud())
+                            .append(',')
+                            .append(reserva.estado())
+                            .append('\n');
+                }
+                System.out.println("CSV file was saved successfully!");
+            } catch (IOException e) {
+                System.err.println("An error occurred while saving the CSV file: " + e.getMessage());
+            }
         }
     }
 }
