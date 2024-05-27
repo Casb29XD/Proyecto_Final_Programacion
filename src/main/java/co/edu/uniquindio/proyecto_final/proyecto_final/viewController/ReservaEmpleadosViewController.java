@@ -10,9 +10,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class ReservaEmpleadosViewController {
     ReservaController reservaControllerServices;
@@ -21,6 +27,7 @@ public class ReservaEmpleadosViewController {
     Persistencia persistencia;
     ArrayList<String> estados=new ArrayList<>();
 
+    private String idUsuario;
     @FXML
     private TableView<ReservaDto> tablaReserva;
 
@@ -60,10 +67,7 @@ public class ReservaEmpleadosViewController {
     @FXML
     private Button BtnActualizar;
 
-    @FXML
-    void ActualizarReservaAction(ActionEvent event) {
 
-    }
     @FXML
     void initialize() {
         reservaControllerServices = new ReservaController();
@@ -105,6 +109,93 @@ public class ReservaEmpleadosViewController {
             TxtFecha.setText(reservaDto.fechaSolicitud());
         }
     }
+    @FXML
+    void ActualizarReservaAction(ActionEvent event) {
+        actualizarEvento();
+    }
 
+    private void actualizarEvento() {
+
+    }
+    @FXML
+    void regresar(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/proyecto_final/proyecto_final/LoginView.fxml"));
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+
+            ((Stage)((Button)event.getSource()).getScene().getWindow()).close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private ReservaDto construirReservaDto() {
+        return new ReservaDto(
+                TxtID.getText(),
+            TxtUsuario.getText(),
+            TxtCodigoEve.getText(),
+            TxtFecha.getText(),
+                estado.getSelectionModel().getSelectedItem().toString()
+        );
+    }
+
+    private void limpiarCamposReserva() {
+        TxtID.setText("");
+        TxtUsuario.setText("");
+        TxtCodigoEve.setText("");
+        TxtFecha.setText("");
+    }
+    private boolean datosValidos(ReservaDto reservaDto) {
+        String mensaje = "";
+        if (reservaDto.id().equals("") || reservaDto.usuario().equals(" ")){
+            mensaje += "El nombre del usuario es obligatorio\n";
+        }
+        if (reservaDto.evento().equals("") || reservaDto.usuario().equals(" ")){
+            mensaje += "El nombre del evento es obligatorio\n";
+        }
+        if (reservaDto.usuario().equals("") || reservaDto.usuario().equals(" ")){
+            mensaje += "El usuario es obligatorio\n";
+        }
+        if(reservaDto.fechaSolicitud().equals("") || reservaDto.fechaSolicitud().equals(" ")){
+            mensaje += "El fecha de solicitud es obligatorio\n";
+        }
+        if(reservaDto.estado().equals("") || reservaDto.estado().equals(" ")){
+            mensaje += "El estado es obligatorio\n";
+        }
+        if(mensaje.equals("")){
+            return true;
+        }else{
+            mostrarMensaje("Notificación cliente","Datos invalidos",mensaje, Alert.AlertType.WARNING);
+            return false;
+        }
+    }
+
+    private void mostrarMensaje(String titulo, String header, String contenido, Alert.AlertType alertType) {
+        Alert aler = new Alert(alertType);
+        aler.setTitle(titulo);
+        aler.setHeaderText(header);
+        aler.setContentText(contenido);
+        aler.showAndWait();
+    }
+
+    private boolean mostrarMensajeConfirmacion(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Confirmación");
+        alert.setContentText(mensaje);
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
 
 }
