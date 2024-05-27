@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="243c359d-8a84-4c6d-91b0-d574e53f3f21" name="Changes" comment="complementos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/EmpleadoViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/EmpleadoViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/ReservaViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/ReservaViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/UsuarioViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/UsuarioViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/ReservaView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/ReservaView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/UsuarioView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/co/edu/uniquindio/proyecto_final/proyecto_final/UsuarioView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/log/BancoLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/log/BancoLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/login/Usuarios.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/login/Usuarios.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +142,7 @@
       <workItem from="1716615174651" duration="5039000" />
       <workItem from="1716648486531" duration="4629000" />
       <workItem from="1716746146970" duration="14812000" />
-      <workItem from="1716771636469" duration="8946000" />
+      <workItem from="1716771636469" duration="13161000" />
     </task>
     <task id="LOCAL-00001" summary="map">
       <option name="closed" value="true" />
@@ -349,7 +352,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716780931378</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="complementos">
+      <option name="closed" value="true" />
+      <created>1716785584017</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1716785584017</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,16 +390,5 @@
     <MESSAGE value="repositorio nuevo" />
     <MESSAGE value="complementos" />
     <option name="LAST_COMMIT_MESSAGE" value="complementos" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/model/Sgre.java</url>
-          <line>402</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

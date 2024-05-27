@@ -201,3 +201,43 @@ may. 26, 2024 10:32:27 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.ut
 ADVERTENCIA: Inicio seccion el empleado Admin,Inicio de seccion por Empleado,2024-05-26
 may. 26, 2024 10:32:27 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
+may. 27, 2024 1:05:50 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario sara,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:05:58 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario sara,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:07:24 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario sara,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:10:02 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario sara,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:10:02 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-27
+may. 27, 2024 1:11:44 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario sara,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:11:44 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-27
+may. 27, 2024 1:14:37 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario sara,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:14:38 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-27
+may. 27, 2024 1:16:52 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 12345,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:16:52 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-27
+may. 27, 2024 1:17:24 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario prueba,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:17:24 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-27
+may. 27, 2024 1:20:40 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 12345,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:20:40 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-27
+may. 27, 2024 1:23:30 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario sara,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:23:38 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 12345,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:25:10 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 12345,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:32:14 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 12345,Inicio de seccion por Usuario,2024-05-27
+may. 27, 2024 1:32:14 A. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-27
