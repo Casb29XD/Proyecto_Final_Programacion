@@ -273,6 +273,7 @@ public class EmpleadoViewController {
             e.printStackTrace();
         }
     }
+
     public void setIdUsuario(String idUsuario) {
         this.idUsuario = idUsuario;
     }
