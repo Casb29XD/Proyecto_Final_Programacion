@@ -161,12 +161,12 @@ public class EmpleadoViewController {
                 empleadoEliminado = empleadoControllerService.eliminarEmpleado(empleadoSeleccionado.id());
                 if(empleadoEliminado == true){
                     listaEmpleadosDto.remove(empleadoSeleccionado);
-                    empleadoSeleccionado = null;
-                    tableEmpleados.getSelectionModel().clearSelection();
-                    limpiarCamposEmpleado();
                     login.deleteUser(empleadoSeleccionado.id(), RUTA_ARCHIVO_EMPLEADOS);
                     persistencia.guardaRegistroLog("Eliminacio de Empleado",2, "Se Elimino el empleado con la cedula de " + empleadoSeleccionado.id()+ " Por el admin de id: " +idUsuario);
                     mostrarMensaje("Notificación empleado", "Empleado eliminado", "El empleado se ha eliminado con éxito", Alert.AlertType.INFORMATION);
+                    tableEmpleados.getSelectionModel().clearSelection();
+                    limpiarCamposEmpleado();
+                    empleadoSeleccionado = null;
                 }else{
                     mostrarMensaje("Notificación empleado", "Empleado no eliminado", "El empleado no se puede eliminar", Alert.AlertType.ERROR);
                 }
