@@ -4,6 +4,7 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.controller.EmpleadoContro
 import co.edu.uniquindio.proyecto_final.proyecto_final.controller.UsuarioController;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.EmpleadoDto;
 import co.edu.uniquindio.proyecto_final.proyecto_final.mapping.dto.UsuarioDto;
+import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Login;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,12 +14,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class RegistroViewController {
+    Login login = new Login();
+    public static final String RUTA_ARCHIVO_USUARIOS = "src/main/resources/persistencia/login/Usuarios.txt";
     UsuarioController usuarioControllerService;
     ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList();
     private String idUsuario;
@@ -38,7 +42,7 @@ public class RegistroViewController {
     private Button BtnRegistroGuardar;
 
     @FXML
-    private TextField TxtRegistroPass;
+    private PasswordField Password;
 
     @FXML
     void RegistrarseAction(ActionEvent event) {
@@ -52,26 +56,32 @@ public class RegistroViewController {
 
     private void crearUsuario() {
         //1. Capturar los datos
-        UsuarioDto usuarioDto = construirUsuarioDto();
-        //2. Validar la información
-        if(datosValidos(usuarioDto)){
-            if(usuarioControllerService.agregarUsuario(usuarioDto)){
-                listaUsuariosDto.add(usuarioDto);
-                mostrarMensaje("Notificación empleado", "Empleado creado", "El empleado se ha creado con éxito", Alert.AlertType.INFORMATION);
-                limpiarCamposUsuario();
+        if(TxtRegistroId.getText().isEmpty() || TxtRegistroNombre.getText().isEmpty() || TxtRegistroCorreo.getText().isEmpty() || Password.getText().isEmpty()){
+            mostrarMensaje("Faltan Datos","Alerta","Tienes que llenar todos los Campos.",Alert.AlertType.ERROR);
+        }else {
+            UsuarioDto usuarioDto = construirUsuarioDto();
+            //2. Validar la información
+            if(datosValidos(usuarioDto)){
+                if(usuarioControllerService.agregarUsuario(usuarioDto)){
+                    listaUsuariosDto.add(usuarioDto);
+                    mostrarMensaje("Notificación empleado", "Empleado creado", "El empleado se ha creado con éxito", Alert.AlertType.INFORMATION);
+                    login.register(usuarioDto.id(),Password.getText().toString(),RUTA_ARCHIVO_USUARIOS);
+                    limpiarCamposUsuario();
+                }else{
+                    mostrarMensaje("Notificación empleado", "Empleado no creado", "El empleado no se ha creado con éxito", Alert.AlertType.ERROR);
+                }
             }else{
-                mostrarMensaje("Notificación empleado", "Empleado no creado", "El empleado no se ha creado con éxito", Alert.AlertType.ERROR);
+                mostrarMensaje("Notificación empleado", "Empleado no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
             }
-        }else{
-            mostrarMensaje("Notificación empleado", "Empleado no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
         }
+
     }
 
     private void limpiarCamposUsuario() {
         TxtRegistroNombre.setText("");
         TxtRegistroCorreo.setText("");
         TxtRegistroId.setText("");
-        TxtRegistroPass.setText("");
+        Password.setText("");
     }
 
     private UsuarioDto construirUsuarioDto() {
@@ -107,7 +117,7 @@ public class RegistroViewController {
             mensaje += "El documento es invalido \n" ;
         if(mensaje.equals("")){
             return true;
-        }else{
+        } else{
             mostrarMensaje("Notificación cliente","Datos invalidos",mensaje, Alert.AlertType.WARNING);
             return false;
         }
