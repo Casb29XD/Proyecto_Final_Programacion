@@ -115,7 +115,29 @@ public class ReservaEmpleadosViewController {
     }
 
     private void actualizarEvento() {
+        boolean reservaActualizado = false;
+        //1. Capturar los datos
+        String idReserva = TxtID.getText().toString();
+        ReservaDto reservaDto = construirReservaDto();
+        //2. verificar el Reserva seleccionado
+        if(idReserva != null){
+            //3. Validar la información
+            if(datosValidos(reservaDto)){
+                reservaActualizado = reservaControllerServices.actualizarReserva(idReserva, reservaDto);
+                if(reservaActualizado){
+                    listaReservaDto.remove(idReserva);
+                    listaReservaDto.add(reservaDto);
+                    mostrarMensaje("Notificación Reserva", "Reserva actualizado", "El Reserva se ha actualizado con éxito", Alert.AlertType.INFORMATION);
+                    persistencia.guardaRegistroLog("Actualizacion de Reserva",2, "Se Actualizo la informacion del Reserva con la cedula de " + idReserva + " Por el usuario de id: " +idUsuario);
+                    limpiarCamposReserva();
+                }else{
+                    mostrarMensaje("Notificación Reserva", "Reserva no actualizado", "El Reserva no se ha actualizado con éxito", Alert.AlertType.INFORMATION);
+                }
+            }else{
+                mostrarMensaje("Notificación Reserva", "Reserva no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
+            }
 
+        }
     }
     @FXML
     void regresar(ActionEvent event) {
