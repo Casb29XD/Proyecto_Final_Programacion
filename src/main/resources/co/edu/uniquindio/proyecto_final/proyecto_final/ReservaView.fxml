@@ -16,7 +16,7 @@
          </font>
       </Label>
       <TextField fx:id="TxtIdReserva" layoutX="92.0" layoutY="142.0" promptText="Cédula" />
-      <TextField fx:id="TxtUserReserva" layoutX="343.0" layoutY="142.0" promptText="Nombre de usuario" />
+      <TextField fx:id="TxtUserReserva" layoutX="343.0" layoutY="142.0" promptText="Cedula del usuario" />
       <TextField fx:id="TxtNombreReserva" layoutX="92.0" layoutY="207.0" prefHeight="25.0" prefWidth="149.0" promptText="Nombre evento" />
       <DatePicker fx:id="DateReserva" layoutX="343.0" layoutY="207.0" prefHeight="25.0" prefWidth="149.0" promptText="Fecha solicitud" />
       <Separator layoutY="103.0" prefHeight="3.0" prefWidth="600.0" />

@@ -41,7 +41,7 @@ public class ModelFactoryController implements IModelFactoryService,IUsuarioCont
         //salvarDatosPrueba();
 
         //2. Cargar los datos de los archivos
-		cargarDatosDesdeArchivos();
+		//cargarDatosDesdeArchivos();
 
         //3. Guardar y Cargar el recurso serializable binario
 
@@ -57,9 +57,9 @@ public class ModelFactoryController implements IModelFactoryService,IUsuarioCont
         if(sgre == null){
 
             cargarDatosBase();
-            guardarResourceXML();
-            cargarDatosDesdeArchivos();
-            cargarResourceXML();
+            //guardarResourceXML();
+            //cargarDatosDesdeArchivos();
+            //cargarResourceXML();
         }
         registrarAccionesSistema("Inicio de sesión", 1, "inicioSesión");
 
@@ -78,7 +78,9 @@ public class ModelFactoryController implements IModelFactoryService,IUsuarioCont
     private void salvarDatosPrueba() {
         try {
             Persistencia.guardarEmpleados(getSgre().getEmpleados());
-            //Persistencia.guardarClientes(getSgre().getUsuarios());
+            Persistencia.guardarUsuarios(getSgre().getUsuarios());
+            Persistencia.guardarEventos(getSgre().getEventos());
+            Persistencia.guardarReservas(getSgre().getReservas());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

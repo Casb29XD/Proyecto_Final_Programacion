@@ -1,0 +1,3 @@
+EVT001@@Conferencia de Tecnología@@Una conferencia sobre las últimas tendencias en tecnología.@@2024/10/8@@200@@Juan Pérez@@[]
+EVT002@@Taller de Marketing Digital@@Un taller intensivo sobre estrategias de marketing digital.@@2024/7/15@@50@@Ana García@@[]
+EVT005@@Festival de Música@@Festival con la participación de bandas locales e internacionales.@@2024/10/30@@500@@Javier Martínez@@[]
