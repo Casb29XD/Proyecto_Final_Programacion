@@ -107,3 +107,17 @@ may. 26, 2024 5:57:54 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.uti
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
 may. 26, 2024 6:05:58 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
 ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 7:51:13 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
+may. 26, 2024 7:57:38 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el empleado Admin,Inicio de seccion por Empleado,2024-05-26
+may. 26, 2024 7:57:38 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
+may. 26, 2024 7:58:00 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Se creo un empleado con la cedula de 123456 Por el admin de id: Admin,Creacion Empleado,2024-05-26
+may. 26, 2024 8:01:47 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el empleado Admin,Inicio de seccion por Empleado,2024-05-26
+may. 26, 2024 8:01:47 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
+may. 26, 2024 8:02:02 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Se creo un empleado con la cedula de abc Por el admin de id: Admin,Creacion Empleado,2024-05-26

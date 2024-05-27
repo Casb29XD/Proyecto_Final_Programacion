@@ -58,8 +58,8 @@ public class Login {
         }
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
-            bw.write(username + "," + password);
-            bw.newLine();
+            bw.write(username + "," + password + "\n");
+            bw.close();
         } catch (IOException e) {
             System.err.println("Error writing to users file: " + e.getMessage());
             return false;

@@ -80,6 +80,19 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.proyecto_final.proyecto_final.model.Empleado">
+     <void property="correo">
+      <string>adadawda</string>
+     </void>
+     <void property="id">
+      <string>123456</string>
+     </void>
+     <void property="nombre">
+      <string>wdaw</string>
+     </void>
+    </object>
+   </void>
   </void>
  </object>
 </java>
