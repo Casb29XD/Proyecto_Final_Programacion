@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class ReservaEmpleadosViewController {
     ReservaController reservaControllerServices;
     ObservableList<ReservaDto> listaReservaDto = FXCollections.observableArrayList();
+    ReservaDto reservaSelecionada;
     Persistencia persistencia;
     ArrayList<String> estados=new ArrayList<>();
 
@@ -90,18 +91,20 @@ public class ReservaEmpleadosViewController {
     }
 
     private void listenerSelection() {
-        tableEmpleados.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            empleadoSeleccionado = newSelection;
-            mostrarInformacionEmpleado(empleadoSeleccionado);
+        tablaReserva.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            reservaSelecionada = newSelection;
+            mostrarInformacionEmpleado(reservaSelecionada);
         });
     }
 
-    private void mostrarInformacionEmpleado(EmpleadoDto empleadoSeleccionado) {
-        if(empleadoSeleccionado != null){
-            txtNombre.setText(empleadoSeleccionado.nombre());
-            txtId.setText(empleadoSeleccionado.id());
-            txtCorreo.setText(empleadoSeleccionado.correo());
+    private void mostrarInformacionEmpleado(ReservaDto reservaDto) {
+        if(reservaSelecionada != null){
+            TxtID.setText(reservaDto.id());
+            TxtUsuario.setText(reservaDto.usuario());
+            TxtCodigoEve.setText(reservaDto.evento());
+            TxtFecha.setText(reservaDto.fechaSolicitud());
         }
     }
+
 
 }
