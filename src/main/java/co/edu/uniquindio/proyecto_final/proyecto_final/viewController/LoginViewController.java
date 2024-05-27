@@ -56,7 +56,7 @@ public class LoginViewController {
                 if(viewPath.equals("Empleado")){
                     if (login.login(usuario,contraseña,RUTA_ARCHIVO_EMPLEADOS)) {
                         persistencia.guardaRegistroLog("Inicio de seccion por Empleado",1, "Inicio seccion el empleado " + usuario);
-                        viewPath= "/co/edu/uniquindio/proyecto_final/proyecto_final/EventosView.fxml";
+                        viewPath= "/co/edu/uniquindio/proyecto_final/proyecto_final/ReservaEmpleadosView.fxml";
                         FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
                         Parent root = loader.load();
                         EventosViewController controller = loader.getController();
