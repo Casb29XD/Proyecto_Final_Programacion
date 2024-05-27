@@ -153,3 +153,7 @@ may. 26, 2024 8:13:31 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.uti
 ADVERTENCIA: Inicio seccion el empleado Admin,Inicio de seccion por Empleado,2024-05-26
 may. 26, 2024 8:13:31 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
+may. 26, 2024 10:00:38 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 10:04:05 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: Inicio seccion el empleado 12345,Inicio de seccion por Empleado,2024-05-26

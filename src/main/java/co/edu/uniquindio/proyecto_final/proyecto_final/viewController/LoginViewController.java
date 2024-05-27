@@ -55,11 +55,10 @@ public class LoginViewController {
 
                 if(viewPath.equals("Empleado")){
                     if (login.login(usuario,contraseña,RUTA_ARCHIVO_EMPLEADOS)) {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
-                        Parent root = loader.load();
                         persistencia.guardaRegistroLog("Inicio de seccion por Empleado",1, "Inicio seccion el empleado " + usuario);
                         viewPath= "/co/edu/uniquindio/proyecto_final/proyecto_final/EventosView.fxml";
-
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
+                        Parent root = loader.load();
                         EventosViewController controller = loader.getController();
                         controller.setIdUsuario(usuario);
                         Scene scene = new Scene(root);
@@ -68,19 +67,32 @@ public class LoginViewController {
                         stage.show();
                     }
                 } else if (viewPath.equals("Usuario")) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
-                    Parent root = loader.load();
                     if (login.login(usuario,contraseña,RUTA_ARCHIVO_USUARIOS)) {
                         persistencia.guardaRegistroLog("Inicio de seccion por Usuario", 2, "Inicio seccion el usuario " + usuario);
                         viewPath= "/co/edu/uniquindio/proyecto_final/proyecto_final/UsuarioView.fxml";
-
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
+                        Parent root = loader.load();
+                        UsuarioViewController controller = loader.getController();
+                        controller.setIdUsuario(usuario);
+                        Scene scene = new Scene(root);
+                        Stage stage = new Stage();
+                        stage.setScene(scene);
+                        stage.show();
                     }
                 } else if (viewPath.equals("Administrador")) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
-                    Parent root = loader.load();
+                    if (login.login(usuario,contraseña,RUTA_ARCHIVO_ADMIN)) {
+                        persistencia.guardaRegistroLog("Inicio de seccion por Empleado", 2, "Inicio seccion el empleado " + usuario);
+                        viewPath ="/co/edu/uniquindio/proyecto_final/proyecto_final/EmpleadoView.fxml";
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
+                        Parent root = loader.load();
+                        EmpleadoViewController controller = loader.getController();
+                        controller.setIdUsuario(usuario);
+                        Scene scene = new Scene(root);
+                        Stage stage = new Stage();
+                        stage.setScene(scene);
+                        stage.show();
+                    }
                 }
-
-
 
                 CmbBoxRolLogin.getScene().getWindow().hide();
             } catch (IOException e) {
@@ -97,10 +109,7 @@ public class LoginViewController {
                 case "Usuario":
                     return "Usuario";
                 case "Administrador":
-                    if (login.login(usuario,contraseña,RUTA_ARCHIVO_ADMIN)) {
-                        persistencia.guardaRegistroLog("Inicio de seccion por Empleado", 2, "Inicio seccion el empleado " + usuario);
-                        return "/co/edu/uniquindio/proyecto_final/proyecto_final/EmpleadoView.fxml";
-                    }
+                    return "Administrador";
                 default:
                     return null;
             }
