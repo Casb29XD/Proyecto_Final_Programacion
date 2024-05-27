@@ -193,3 +193,11 @@ may. 26, 2024 10:19:23 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.ut
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
 may. 26, 2024 10:19:41 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
 ADVERTENCIA: Inicio seccion el usuario prueba,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 10:29:19 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el empleado Admin,Inicio de seccion por Empleado,2024-05-26
+may. 26, 2024 10:29:19 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
+may. 26, 2024 10:32:27 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el empleado Admin,Inicio de seccion por Empleado,2024-05-26
+may. 26, 2024 10:32:27 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
