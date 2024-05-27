@@ -8,6 +8,7 @@ import co.edu.uniquindio.proyecto_final.proyecto_final.model.services.IEmpleadoS
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.services.IEventoservice;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.services.IReservaService;
 import co.edu.uniquindio.proyecto_final.proyecto_final.model.services.IUsuarioService;
+import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     List<Empleado> empleados = new ArrayList<>();
     List<Evento> eventos = new ArrayList<>();
     List<Reserva> reservas = new ArrayList<>();
+    Persistencia persistencia = new Persistencia();
 
     public List<Usuario> getUsuarios() {
         return usuarios;
@@ -58,6 +60,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         Empleado nuevoEmpleado= null;
         boolean empleadoExistente= verificarEmpleadoExistente(id);
         if (empleadoExistente){
+            persistencia.guardaRegistroLog("Fallo a crear Empleado",1, "Yase encuentra registrado el empleado "+id);
             throw new EmpleadoException("El Empleado con Id: "+id+" ya se encuentra registrado");
         }else {
             nuevoEmpleado = new Empleado();
@@ -76,6 +79,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         boolean existe=false;
         empleado = obtenerEmpleado(id);
         if (empleado == null){
+            persistencia.guardaRegistroLog("Fallo a eliminar Empleado",1, "No se encuentra registrado el empleado "+id);
             throw new EmpleadoException("El Empleado no se encuentra registrado");
         }else {
             getEmpleados().remove(empleado);
@@ -88,6 +92,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     public boolean actualizarEmpleado(String id, Empleado empleado) throws EmpleadoException {
         Empleado empleadoactual = obtenerEmpleado(id);
         if (empleadoactual == null){
+            persistencia.guardaRegistroLog("Fallo a Actualizar Empleado",1, "NO se encuentra registrado el empleado "+id);
             throw new EmpleadoException("Ese Empleado no existe");
         }else {
             empleadoactual.setNombre(empleado.getNombre());
@@ -129,6 +134,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         Usuario nuevoUsuario= null;
         boolean usuarioExistente= verificarUsuario(id);
         if (usuarioExiste(id)){
+            persistencia.guardaRegistroLog("Fallo a crear Usuario",1, "Ya se encuentra registrado el Usuario "+id);
             throw new UsuarioException("El usuario con Id: "+id+" ya se encuentra registrado");
         }else {
             nuevoUsuario = new Usuario();
@@ -147,6 +153,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         boolean existe=false;
         usuario = obtenerUsuario(id);
         if (usuario == null){
+            persistencia.guardaRegistroLog("Fallo a eliminar usuario",1, "No se encuentra registrado el Usuario "+id);
             throw new UsuarioException("El Usuario no se encuentra registrado");
         }else {
             getUsuarios().remove(usuario);
@@ -159,6 +166,8 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     public boolean actualizarUsuario(String id, Usuario usuario) throws UsuarioException {
         Usuario usaurioactual = obtenerUsuario(id);
         if (usaurioactual == null){
+            persistencia.guardaRegistroLog("Fallo a Actualizar Empleado",1, "No se encuentra registrado el empleado "+id);
+
             throw new UsuarioException("Ese Usuario no existe");
         }else {
             usaurioactual.setNombre(usuario.getNombre());
@@ -199,7 +208,8 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     public Reserva crearReserva(String id, String usuario, String evento, String fechaSolicitud, String estado) throws ReservaException {
         Reserva nuevoReserva= null;
         boolean ReservaExistente= verificarReservaExistente(id);
-        if (usuarioExiste(id)){
+        if (verificarReservaExistente(id)){
+            persistencia.guardaRegistroLog("Fallo a crear Evento",1, "Yase encuentra registrado el evento "+id);
             throw new ReservaException("La Reserva con Id: "+id+" ya se encuentra registrado");
         }else {
             nuevoReserva.setId(id);
@@ -217,6 +227,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         boolean existe=false;
         reserva = obtenerReserva(id);
         if (reserva == null){
+            persistencia.guardaRegistroLog("Fallo a Eliminar reserva",1, "No se encuentra registrado el Reserva "+id);
             throw new ReservaException("El Reserva no se encuentra registrado");
         }else {
             getUsuarios().remove(reserva);
@@ -229,6 +240,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     public boolean actualizarReserva(String id, Reserva reserva) throws ReservaException {
         Reserva reservaactual = obtenerReserva(id);
         if (reservaactual == null){
+            persistencia.guardaRegistroLog("Fallo a Actualizar las Reservas",1, "No se encuentra registrado el empleado "+id);
             throw new ReservaException("Ese Reserva no existe");
         }else {
             reservaactual.setId(reserva.getId());
@@ -272,6 +284,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         Evento nuevoEvento= null;
         boolean EventoExistente= verificarEventoExistente(id);
         if (usuarioExiste(id)){
+            persistencia.guardaRegistroLog("Fallo a crear Evento",1, "Ya se encuentra registrado el Evento "+id);
             throw new EventoExceprion("El Evento con Id: "+id+" ya se encuentra registrado");
         }else {
             nuevoEvento.setId(id);
@@ -290,6 +303,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
         boolean existe=false;
         evento = obtenerEvento(id);
         if (evento == null){
+            persistencia.guardaRegistroLog("Fallo a Eliminar Evento",1, "No se encuentra registrado el Evento "+id);
             throw new EventoExceprion("El Evento no se encuentra registrado");
         }else {
             getEventos().remove(evento);
@@ -302,6 +316,7 @@ public class Sgre implements IEmpleadoService, IUsuarioService, IReservaService,
     public boolean actualizarEvento(String id, Evento evento) throws EventoExceprion {
         Evento eventoactual = obtenerEvento(id);
         if (eventoactual == null){
+            persistencia.guardaRegistroLog("Fallo a Actualizar Evento",1, "No se encuentra registrado el Evento "+id);
             throw new EventoExceprion("Ese Evento no existe");
         }else {
             eventoactual.setId(evento.getId());
