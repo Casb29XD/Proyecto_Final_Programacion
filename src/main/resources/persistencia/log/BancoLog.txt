@@ -121,3 +121,35 @@ may. 26, 2024 8:01:47 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.uti
 INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26
 may. 26, 2024 8:02:02 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
 ADVERTENCIA: Se creo un empleado con la cedula de abc Por el admin de id: Admin,Creacion Empleado,2024-05-26
+may. 26, 2024 8:07:35 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:37 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:40 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:40 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:41 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:41 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:41 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:41 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:45 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:51 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:52 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:07:52 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:09:57 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el usuario 312470,Inicio de seccion por Usuario,2024-05-26
+may. 26, 2024 8:13:18 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: Inicio seccion el empleado 12345,Inicio de seccion por Empleado,2024-05-26
+may. 26, 2024 8:13:31 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: Inicio seccion el empleado Admin,Inicio de seccion por Empleado,2024-05-26
+may. 26, 2024 8:13:31 P. M. co.edu.uniquindio.proyecto_final.proyecto_final.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2024-05-26

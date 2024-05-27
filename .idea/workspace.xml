@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="243c359d-8a84-4c6d-91b0-d574e53f3f21" name="Changes" comment="complementos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/utils/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/utils/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/archivoEmpleados.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/archivoEmpleados.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/archivoUsuarios.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/archivoUsuarios.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/proyecto_final/proyecto_final/viewController/LoginViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/log/BancoLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/log/BancoLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/login/Empleados.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/login/Empleados.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/login/Usuarios.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/login/Usuarios.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/persistencia/model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistencia/model.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +136,7 @@
       <workItem from="1716615174651" duration="5039000" />
       <workItem from="1716648486531" duration="4629000" />
       <workItem from="1716746146970" duration="14812000" />
-      <workItem from="1716771636469" duration="153000" />
+      <workItem from="1716771636469" duration="2338000" />
     </task>
     <task id="LOCAL-00001" summary="map">
       <option name="closed" value="true" />
@@ -310,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716770701018</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="complementos">
+      <option name="closed" value="true" />
+      <created>1716771941313</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1716771941313</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

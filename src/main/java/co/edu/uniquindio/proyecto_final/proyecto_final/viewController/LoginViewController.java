@@ -1,5 +1,7 @@
 package co.edu.uniquindio.proyecto_final.proyecto_final.viewController;
 
+
+import co.edu.uniquindio.proyecto_final.proyecto_final.model.Usuario;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Login;
 import co.edu.uniquindio.proyecto_final.proyecto_final.utils.Persistencia;
 import javafx.event.ActionEvent;
@@ -44,23 +46,41 @@ public class LoginViewController {
     @FXML
     void IniciarSesionAction(ActionEvent event) {
         String selectedRole = CmbBoxRolLogin.getValue();
-
+        String usuario= TxtLoginID.getText();
+        String contraseña = password.getText().toString();
         if (selectedRole != null) {
             try {
-                String usuario = TxtLoginID.getText().toString();
 
                 String viewPath = getViewPath(selectedRole);
-                FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
-                Parent root = loader.load();
 
-                EmpleadoViewController empleadoController = loader.getController();
+                if(viewPath.equals("Empleado")){
+                    if (login.login(usuario,contraseña,RUTA_ARCHIVO_EMPLEADOS)) {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
+                        Parent root = loader.load();
+                        persistencia.guardaRegistroLog("Inicio de seccion por Empleado",1, "Inicio seccion el empleado " + usuario);
+                        viewPath= "/co/edu/uniquindio/proyecto_final/proyecto_final/EventosView.fxml";
 
-                empleadoController.setIdUsuario(usuario);
+                        EventosViewController controller = loader.getController();
+                        controller.setIdUsuario(usuario);
+                        Scene scene = new Scene(root);
+                        Stage stage = new Stage();
+                        stage.setScene(scene);
+                        stage.show();
+                    }
+                } else if (viewPath.equals("Usuario")) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
+                    Parent root = loader.load();
+                    if (login.login(usuario,contraseña,RUTA_ARCHIVO_USUARIOS)) {
+                        persistencia.guardaRegistroLog("Inicio de seccion por Usuario", 2, "Inicio seccion el usuario " + usuario);
+                        viewPath= "/co/edu/uniquindio/proyecto_final/proyecto_final/UsuarioView.fxml";
 
-                Scene scene = new Scene(root);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
+                    }
+                } else if (viewPath.equals("Administrador")) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
+                    Parent root = loader.load();
+                }
+
+
 
                 CmbBoxRolLogin.getScene().getWindow().hide();
             } catch (IOException e) {
@@ -70,21 +90,12 @@ public class LoginViewController {
     }
 
     private String getViewPath(String role) {
-        String usuario= TxtLoginID.getText();
-        String contraseña = password.getText().toString();
-        if(!usuario.equals("") && !contraseña.equals("")){
             switch (role) {
                 case "Empleado":
-                    if (login.login(usuario,contraseña,RUTA_ARCHIVO_EMPLEADOS)) {
-                        persistencia.guardaRegistroLog("Inicio de seccion por Empleado",1, "Inicio seccion el empleado " + usuario);
-                        return "/co/edu/uniquindio/proyecto_final/proyecto_final/EventosView.fxml";
-                    }
+                    return "Empleado";
 
                 case "Usuario":
-                    if (login.login(usuario,contraseña,RUTA_ARCHIVO_USUARIOS)) {
-                        persistencia.guardaRegistroLog("Inicio de seccion por Usuario", 2, "Inicio seccion el usuario " + usuario);
-                        return "/co/edu/uniquindio/proyecto_final/proyecto_final/UsuarioView.fxml";
-                    }
+                    return "Usuario";
                 case "Administrador":
                     if (login.login(usuario,contraseña,RUTA_ARCHIVO_ADMIN)) {
                         persistencia.guardaRegistroLog("Inicio de seccion por Empleado", 2, "Inicio seccion el empleado " + usuario);
@@ -93,8 +104,6 @@ public class LoginViewController {
                 default:
                     return null;
             }
-        }
-        return null;
     }
 
     @FXML
