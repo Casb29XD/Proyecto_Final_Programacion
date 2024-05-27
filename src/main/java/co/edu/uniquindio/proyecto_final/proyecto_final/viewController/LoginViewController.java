@@ -38,7 +38,6 @@ public class LoginViewController {
 
     @FXML
     void initialize() {
-
         CmbBoxRolLogin.getItems().addAll("Empleado", "Usuario", "Administrador");
     }
 
@@ -48,10 +47,15 @@ public class LoginViewController {
 
         if (selectedRole != null) {
             try {
+                String usuario = TxtLoginID.getText().toString();
 
                 String viewPath = getViewPath(selectedRole);
                 FXMLLoader loader = new FXMLLoader(getClass().getResource(viewPath));
                 Parent root = loader.load();
+
+                EmpleadoViewController empleadoController = loader.getController();
+
+                empleadoController.setIdUsuario(usuario);
 
                 Scene scene = new Scene(root);
                 Stage stage = new Stage();
@@ -73,7 +77,7 @@ public class LoginViewController {
                 case "Empleado":
                     if (login.login(usuario,contraseña,RUTA_ARCHIVO_EMPLEADOS)) {
                         persistencia.guardaRegistroLog("Inicio de seccion por Empleado",1, "Inicio seccion el empleado " + usuario);
-                        return "/co/edu/uniquindio/proyecto_final/proyecto_final/EmpleadoView.fxml";
+                        return "/co/edu/uniquindio/proyecto_final/proyecto_final/EventosView.fxml";
                     }
 
                 case "Usuario":

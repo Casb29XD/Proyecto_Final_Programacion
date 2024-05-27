@@ -142,7 +142,7 @@ public class EmpleadoViewController {
             if(empleadoControllerService.agregarEmpleado(empleadoDto)){
                 listaEmpleadosDto.add(empleadoDto);
                 mostrarMensaje("Notificación empleado", "Empleado creado", "El empleado se ha creado con éxito", Alert.AlertType.INFORMATION);
-                persistencia.guardaRegistroLog("Creacion Empleado",2, "Se creo un empleado con la cedula de " + empleadoDto.id());
+                persistencia.guardaRegistroLog("Creacion Empleado",2, "Se creo un empleado con la cedula de " + empleadoDto.id()+ " Por el admin de id: " +idUsuario);
                 login.register(empleadoDto.id(),contraseña,RUTA_ARCHIVO_EMPLEADOS);
                 limpiarCamposEmpleado();
             }else{
@@ -165,7 +165,7 @@ public class EmpleadoViewController {
                     tableEmpleados.getSelectionModel().clearSelection();
                     limpiarCamposEmpleado();
                     login.deleteUser(empleadoSeleccionado.id(), RUTA_ARCHIVO_EMPLEADOS);
-                    persistencia.guardaRegistroLog("Eliminacio de Empleado",2, "Se Elimino el empleado con la cedula de " + empleadoSeleccionado.id());
+                    persistencia.guardaRegistroLog("Eliminacio de Empleado",2, "Se Elimino el empleado con la cedula de " + empleadoSeleccionado.id()+ " Por el admin de id: " +idUsuario);
                     mostrarMensaje("Notificación empleado", "Empleado eliminado", "El empleado se ha eliminado con éxito", Alert.AlertType.INFORMATION);
                 }else{
                     mostrarMensaje("Notificación empleado", "Empleado no eliminado", "El empleado no se puede eliminar", Alert.AlertType.ERROR);
@@ -192,7 +192,7 @@ public class EmpleadoViewController {
                     listaEmpleadosDto.add(empleadoDto);
                     tableEmpleados.refresh();
                     mostrarMensaje("Notificación empleado", "Empleado actualizado", "El empleado se ha actualizado con éxito", Alert.AlertType.INFORMATION);
-                    persistencia.guardaRegistroLog("Actualizacion de Empleado",2, "Se Actualizo la informacion del empleado con la cedula de " + empleadoDto.id());
+                    persistencia.guardaRegistroLog("Actualizacion de Empleado",2, "Se Actualizo la informacion del empleado con la cedula de " + empleadoDto.id() + " Por el admin de id: " +idUsuario);
                     limpiarCamposEmpleado();
                     if (!contraseña.equals("")){
                         login.updatePassword(empleadoSeleccionado.id(),contraseña,RUTA_ARCHIVO_EMPLEADOS);

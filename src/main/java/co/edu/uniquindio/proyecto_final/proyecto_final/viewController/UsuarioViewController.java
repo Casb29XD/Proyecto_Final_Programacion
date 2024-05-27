@@ -9,6 +9,8 @@ import javafx.scene.control.TextField;
 
 public class UsuarioViewController {
 
+    private String idUsuario;
+
     @FXML
     private Button btnEliminarUser;
 
@@ -65,5 +67,10 @@ public class UsuarioViewController {
     void actualizarEmpleadoAction(ActionEvent event) {
 
     }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
 
 }

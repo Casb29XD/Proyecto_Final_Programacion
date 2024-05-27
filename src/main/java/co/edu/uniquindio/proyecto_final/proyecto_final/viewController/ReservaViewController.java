@@ -7,7 +7,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class ReservaViewController {
-
+    private String idUsuario;
     @FXML
     private TextField txtCodeReserva;
 
@@ -47,4 +47,7 @@ public class ReservaViewController {
 
     }
 
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
 }

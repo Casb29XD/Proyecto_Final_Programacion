@@ -21,7 +21,7 @@ import java.io.IOException;
 public class RegistroViewController {
     UsuarioController usuarioControllerService;
     ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList();
-
+    private String idUsuario;
     @FXML
     private TextField TxtRegistroNombre;
 
@@ -119,5 +119,9 @@ public class RegistroViewController {
         aler.setHeaderText(header);
         aler.setContentText(contenido);
         aler.showAndWait();
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }

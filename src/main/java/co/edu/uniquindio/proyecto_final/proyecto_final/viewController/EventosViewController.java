@@ -8,6 +8,8 @@ import javafx.scene.control.TableView;
 
 public class EventosViewController {
 
+    private String idUsuario;
+
     @FXML
     private TableColumn<?, ?> TcCapacidadEvento;
 
@@ -63,5 +65,7 @@ public class EventosViewController {
     void CancelarEventoAction(ActionEvent event) {
 
     }
-
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
 }

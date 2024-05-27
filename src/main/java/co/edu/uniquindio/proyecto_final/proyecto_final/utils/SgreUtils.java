@@ -7,7 +7,8 @@ import java.util.Date;
 
 public class SgreUtils {
 
-    public static Sgre InicializarDatos(){
+   public static Sgre InicializarDatos(){
+
         Sgre sgre = new Sgre();
         Evento evento = new Evento();
         Empleado empleado = new Empleado();
